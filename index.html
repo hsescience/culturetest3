@@ -2,144 +2,42 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Первая страница...</title>
-
-		
-		<script type="text/javascript">
-			
-
-		</script>
-
-		
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="font/font.css">
-		<link type="text/css" rel="stylesheet" href="css/jquery.jscrollpane.css"/>
-
-		<script type="text/javascript" src = "js/jquery-1.10.2.js"></script>
-		<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
-		<script type="text/javascript" src="js/controls.js"></script>
-		<script type="text/javascript" src = "js/auto.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		
-		<script type="text/javascript">
-			//addcountriees();
-		</script>
-
 	</head>
 	<body>
 		<div id = "content_block"> 
-			<form name = "auto" method = "GET" action = "document.replace(HZ.html)"> 
-				<div class = "footer_header" id = "header">
+			<form name = "auto" id = "auto" method = "GET" action = "document.replace(hz.html);">
+				<div class = "footer_header">
 					<div class = "left_f_h"></div>
 					<div class = "right_f_h">
-						<input type="text" name = "personname" id = "personinput" placeholder = "Представтесь, пожалуйста" title="Введите свое ФИО"/>
+						<input type="text" name = "personname" id = "personinput" placeholder = "Представтесь, пожалуйста" title="Введите свое ФИО"/ onkeypress="if(event.keyCode == 13) return false;">
 					</div>
 				</div>
-
 				<div style = "clear:both;"></div>
 
 				<div class = "colons">
 					<div class = "colonitem">
-						<p id = "statustext">Ваш статус относительно НИУ ВШЭ</p>
-
-						<div class = "colomnbutton" id = "statusbutton" title = "Выберете ваш статус относительно НИУ ВШЭ" >
-							<input type = "hidden" name = "status" id = "status" value = ""/>
-
-							<div class="liststatus">
-    							<div class = "listitem" onclick = "statusonclick(0)">Абитуриент НИУ ВШЭ</div>
-    							<div class = "listitem" onclick = "statusonclick(1)">Студент НИУ ВШЭ</div>
-    							<div class = "listitem" onclick = "statusonclick(2)">Преподаватель НИУ ВШЭ</div>
-    							<div class = "listitem" onclick = "statusonclick(3)">Сотрудник НИУ ВШЭ</div>
-    							<div class = "listitem" onclick = "statusonclick(4)">Родитель абитуриента НИУ ВШЭ</div>
-    							<div class = "listitem" onclick = "statusonclick(5)">Родитель студента НИУ ВШЭ</div>
-    							<div class = "listitem">Родитель студента НИУ ВШЭ</div>
-    							<div class = "listitem">Родитель студента НИУ ВШЭ</div>
-							</div>
-
-
-
-							<span class = "buttontext" id = "buttonstatus" onclick = "statusopen()">Выберете свой статус</span>
-						</div>
 					</div>
-
 					<div class = "colonitem">
-						<p id = "filialtext">Филиал НИУ ВШЭ</p>
-						<div class = "colomnbutton" id = "filialbutton" title = "Выберете филиал НИУ ВШЭ" >
-
-							<input type = "hidden" name = "filial" id = "filial" value = ""/>
-							<div class="listfilial">
-    							<div class = "listitem" onclick = "filialonclick(0)">Москва</div>
-    							<div class = "listitem" onclick = "filialonclick(1)">МИЭМ</div>
-    							<div class = "listitem" onclick = "filialonclick(2)">Нижний Новгород</div>
-    							<div class = "listitem" onclick = "filialonclick(3)">Пермь</div>
-    							<div class = "listitem" onclick = "filialonclick(4)">ФДП</div>
-    							<div class = "listitem">Родитель студента НИУ ВШЭ</div>
-    							<div class = "listitem">Родитель студента НИУ ВШЭ</div>
-							</div>
-							<span class = "buttontext" id = "filialtextb" onclick = "filialopen()">Выберете свой филиал</span>
-						</div>
-					</div>
-					<div style = "clear:both;"></div>
-				</div>
-
-				<div style = "clear:both;"></div>
-				
-				<div class = "colons"> 
-					<p id = "facultytext">Выберете ваш факультет</p>
-				</div>
-
-				<div style = "clear:both;"></div>
-
-				<div class = "colons"> 
-					<div class = "colonitem">
-						<p id = "countrybrtext">Ваша родная страна</p>
-						<div class = "colomnbutton" id = "statusbutton" title = "Выберете страну из списка" >
-							<input type = "hidden" name = "countrybr" id = "countrybr" value = ""/>
-
-							<div id="listcountrybr">
-    							
-							</div>
-
-
-
-							<span class = "buttontext" id = "buttoncountrybr" onclick = "countrybropen()">Выберете свою страну</span>
-						</div>
-					</div>
-
-
-
-					<div class = "colonitem">
-							<p id = "countrylivtext">Ваша родная страна</p>
-						<div class = "colomnbutton" id = "countrylivbutton" title = "Выберете страну из списка" >
-							<input type = "hidden" name = "countryliv" id = "countryliv" value = ""/>
-
-							<div id="listcountryliv">
-    							
-							</div>
-
-
-
-							<span class = "buttontext" id = "buttoncountryliv" onclick = "countrylivopen()">Выберете свою страну</span>
-						</div>
 					</div>
 				</div>
 
-				<div style = "clear:both; margin: 10px;"></div>
 
-				<div class = "footer_header" id = "footer">
-					<div class = "left_f_h" id = "submitbutton" onclick = "submitonclick();">
+
+				<div style = "margin-top: 10px; clear: both;"></div>
+				<div class = "footer_header">
+					<div class = "left_f_h" id = "submitbutton" onclick = "">
 						<p title = "Вход, не забудьте ввести необходимые поля">Войти!</p>
 					</div>
-					<div class = "right_f_h" id = "soglasietext" onclick = " soglasieclick()">
+					<div class = "right_f_h" id = "soglasietext" onclick = "">
 						<p  title = "Согласие на обработку персональных данных">Да, я согласен(на) на обработку моих данных</p>
 					</div>
 				</div>
-		<input type = "submit" onclick = "return false;">
-		</form>
+				
+			</form>			
 		</div>
 	</body>
-	<!--Будущий счетчик-->
-	<script type="text/javascript">
-	 addcountriees(); 
-				
-		
-	</script> 
+	
 </html>
